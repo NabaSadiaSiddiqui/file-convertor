@@ -29,14 +29,14 @@ if($original_fmt eq "csv") {
 }
 elsif($original_fmt eq "xlsx") {
 	my $in = Text::nExcel->new(streamIn => $src_file);
-	$data = $in->readCSV();
+	$data = $in->readExcel();
 }
 else {
 	die("Error :: The flag -o was not specified a supported format. Currently supported formats are csv and xlsx\n\n");
 }
 
 if($target_fmt eq "csv") {
-	my $out = Text::nExcel->new( streamOut => $dest_file, dataObj => $data);
+	my $out = Text::nCSV->new( streamOut => $dest_file, dataObj => $data);
 	$out->writeCSV();
 }
 elsif($target_fmt eq "xlsx") {
