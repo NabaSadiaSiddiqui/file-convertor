@@ -12,4 +12,5 @@ usage: `bin/main.pl [<command>] [<args>]`
   
 Example: `bin/main.pl -o csv -s input.csv -t xlsx -d output.xlsx`
   
-note [1] - csv is comma separated value file format; xlsx is excel spreadsheet file format
+note [1] - csv is comma separated value file format; xlsx is excel spreadsheet file format  
+note [2] - currently, the utility can only read from the first, open worksheet when converting from xlsx to another format
